@@ -2,7 +2,7 @@
 
 ## 概述
 
-URL（统一资源定位符）是因特网中的唯一资源的地址。它是浏览器用于检索已发布资源（例如 HTML 页面、CSS 文档、图像等）的关键机制之一。 </br>
+URL（统一资源定位符）是因特网中的唯一资源的地址。它是浏览器用于检索已发布资源（例如 HTML 页面、CSS 文档、图像等）的关键机制之一。 <br>
 理论上说，每个有效的 URL 都指向一个唯一的资源。
 
 ## 剖析 URL
@@ -27,9 +27,9 @@ URL（统一资源定位符）是因特网中的唯一资源的地址。它是�
 
 结构：`协议://主机名:端口/路径?查询参数#锚点`
 
-示例： </br>
-https://www.example.com/images/logo.png </br>
-https://blog.example.com/articles/index.html </br>
+示例： <br>
+https://www.example.com/images/logo.png <br>
+https://blog.example.com/articles/index.html <br>
 //cdn.example.com/script.js (这是一种特殊的协议相对URL，它会继承当前页面的协议（HTTP或HTTPS），现在已不推荐使用)。
 
 特点与用法：
@@ -155,8 +155,8 @@ RewriteRule ^articles/([a-zA-Z0-9-]+)/?$ article.php?slug=$1 [L]
 
 示例Nginx：
 
-目标：</br>
-将用户访问的友好URL：https://example.com/product/123</br>
+目标：<br>
+将用户访问的友好URL：https://example.com/product/123<br>
 在内部映射到：/product.php?id=123
 
 ```nginx

@@ -4,9 +4,9 @@
 
 ### 1、安装代码编辑器
 
-推荐：[Visual Studio Code（VS Code）](https://code.visualstudio.com) </br>
-推荐理由：免费、轻量、功能强大，拥有及其丰富的插件生态系统 </br>
-必要的插件（可选）： </br>
+推荐：[Visual Studio Code（VS Code）](https://code.visualstudio.com) <br>
+推荐理由：免费、轻量、功能强大，拥有及其丰富的插件生态系统 <br>
+必要的插件（可选）： <br>
 - Chinese (Simplified) Language Pack：中文汉化包。
 - Live Server：一键启动一个本地开发服务器，代码修改后浏览器自动刷新。
 - Prettier - Code formatter：代码自动化格式化工具，保持代码风格统一。
@@ -16,8 +16,8 @@
 
 ### 2、安装现代浏览器
 
-推荐：[Google Chrome](https://www.google.com/chrome) (国内可能访问不了，可自行寻找资源下载) </br>
-推荐理由：拥有强大的开发者工具，是前端调试的利器 </br>
+推荐：[Google Chrome](https://www.google.com/chrome) (国内可能访问不了，可自行寻找资源下载) <br>
+推荐理由：拥有强大的开发者工具，是前端调试的利器 <br>
 学习使用开发者工具：
 - 在网页上右键点击，选择“检查”或按 F12 即可打开。
 - 学会使用 Elements 面板查看和修改 HTML/CSS
@@ -27,17 +27,17 @@
 ### 3、安装 Node.js 和 npm
 
 
-[Node官网](https://nodejs.org/zh-cn)</br>
-这是现代前端开发的核心环境。npm (Node Package Manager) 会随着 Node.js 一起安装。</br>
-强烈建议下载 LTS (长期支持版)，它更稳定。</br>
-验证安装：</br>
+[Node官网](https://nodejs.org/zh-cn)<br>
+这是现代前端开发的核心环境。npm (Node Package Manager) 会随着 Node.js 一起安装。<br>
+强烈建议下载 LTS (长期支持版)，它更稳定。<br>
+验证安装：<br>
 ```bash
 # 在终端中执行以下命令。正确显示对应版本号即表示成功
 node -v
 npm -v
 ```
 
-配置 npm（可选但推荐）：</br>
+配置 npm（可选但推荐）：<br>
 ```bash
 # 设置全局安装路径（避免使用系统权限）
 mkdir ~/.npm-global
@@ -50,7 +50,7 @@ npm config set prefix ‘~/.npm-global'
 npm config set registry https://registry.npmmirror.com/
 ```
 
-yarn安装（可选）：</br>
+yarn安装（可选）：<br>
 ```bash
 npm install -g yarn
 # 验证安装
@@ -107,15 +107,15 @@ Yarn 与 npm 命令对比
 
 ### 4、安装git
 
-[Git官网](https://git-scm.com)</br>
+[Git官网](https://git-scm.com)<br>
 Git 是分布式版本控制系统，用于代码的版本管理和团队协作。GitHub/GitLab 是基于 Git 的代码托管平台。
 
-验证安装：</br>
+验证安装：<br>
 ```bash
 git --version
 ```
 
-基本全局配置：</br>
+基本全局配置：<br>
 安装后，你需要设置你的用户名和邮箱，这样你的提交才会带有标识。
 > 不一定需要真名和真实邮箱，但是为了有效标识，建议使用笔名和常用邮箱
 ```bash
@@ -144,7 +144,7 @@ git config --global user.email "你的邮箱@example.com"
 1. 浏览器从存储资源的 Web 服务器中请求你想要访问的资源（例如，一个网页、一些数据、或图片或视频）。这些请求（以及产生的响应）是通过一种名为 HTTP（超文本传输协议）的技术来实现的，它使用动词语言（如 GET）来描述应该进行的操作。
 2. 如果请求成功，Web 服务器会将包含所需资源的 HTTP 响应发送回 Web 浏览器。
 3. 在某些情况下，请求的资源将触发更多 HTTP 请求，这将导致更多响应。例如：
-> - 当网站加载时，最初会请求网站的首页主索引 HTML 文件。</br>
+> - 当网站加载时，最初会请求网站的首页主索引 HTML 文件。<br>
 > - 当浏览器接收到该文件后会尝试解析，这个过程中可能找到发出更多请求的指令。如上所述，这些指令可能是用于嵌入的文件，例如图片、样式信息、脚本等。
 4. 当所有资源请求完成后，Web 浏览器将按照要求解析和渲染它们，然后再将结果显示给用户。
 
