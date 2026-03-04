@@ -35,7 +35,7 @@ MacOS 系统安装 VMWare Fusion 13虚拟机来运行Windows系统。
 - 启动，点击回车
 - 安装系统
 
-网络连接问题：
+#### 网络连接问题：
 > 一般情况下，虚拟机会自动设置网络连接，共享mac ip地址。当你使用了VPN(如： clashx)时，可能因为vpn的虚拟网卡占用了虚拟机的网络资源，导致VMWare的NAT服务启动失败，从而报出 无法连接诶到vmnet8的错误
 
 如何解决：
@@ -45,3 +45,11 @@ MacOS 系统安装 VMWare Fusion 13虚拟机来运行Windows系统。
 
 方法2：为 VMware 设置 ClashX 规则（推荐）
 > 检查 ClashX 的配置，将 VMware Fusion 或其相关进程（如 vmware-vmx）加入规则，让这些流量直连（Direct）。
+
+#### 共享文件、不能全屏展示
+
+>  VMware Tools没有安装
+
+- 虚拟机菜单栏 - 虚拟机 - 安装 VMWare Tools
+- 按照不找安装即可
+- 重启系统，共享文件和支持全屏展示都没有问题了
