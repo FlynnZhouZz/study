@@ -1,12 +1,10 @@
-# webpack（待补）
+# webpack
 
-> 原理与选型的总览见 [构建工具原理与选型](../01-构建工具原理与选型.md)，本目录放 webpack 的具体配置与优化实践。
+> 核心概念、构建流程与产物体积优化的实操层内容。
 
-## 计划大纲
+共 **2** 篇，约 16 KB。
 
-- 核心概念：entry / output / loader / plugin / module resolution
-- 构建流程：初始化 → 编译（make/seal）→ 生成 chunk → emit
-- 常见优化：splitChunks 分包、DLL、持久化缓存、多进程构建
-- 排查手段：`webpack-bundle-analyzer`、stats 分析、`--profile`
-
-状态：`待补`
+| # | 文档 | 要点 |
+|---|------|------|
+| 01 | [webpack 核心概念与构建流程](./01-webpack核心概念与构建流程.md) | 分不清 module、chunk、bundle、asset 四层抽象，就无法解释为什么改一行业务… |
+| 02 | [webpack 性能优化](./02-webpack性能优化.md) | 构建优化的前提是分清「编译变快」与「产物变小」是两条独立的线，混着改只会把慢的部分藏起来。 |

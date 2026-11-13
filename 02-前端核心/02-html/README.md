@@ -7,7 +7,7 @@
 | # | 文档 | 要点 |
 |---|------|------|
 | 01 | [HTML基础语法](./01-HTML基础语法.md) | HTML（HyperText Markup Language，超文本标记语言）是一种标记语言，它… |
-| 02 | [HTML概述](./02-HTML概述.md) | DOCTYPE 声明的目的是让浏览器能够正确地渲染页面。 |
+| 02 | [HTML 概述](./02-HTML概述.md) | DOCTYPE 声明的目的是让浏览器能够正确地渲染页面。 |
 | 03 | [HTML 发展史](./03-HTML发展史.md) | HTML（HyperText Markup Language）从简单的文档标记语言发展到现代 W… |
 | 04 | [HTML调试](./04-HTML调试.md) | HTML 调试是前端开发中的重要技能，涉及多种工具和技巧来识别和修复问题。 |
 | 05 | [HTML标题与段落](./05-标题与段落.md) | HTML 提供了六个级别的标题标签，从 h1 到 h6，其中 h1 级别最高，h6 级别最低。 |

@@ -46,6 +46,6 @@
 | 38 | [BOM 对象（浏览器对象模型）](./38-BOM对象.md) | — |
 | 39 | [DOM 对象（文档对象模型）](./39-DOM对象.md) | — |
 | 40 | [bind、apply、call的区别](./40-bind-apply-call的区别.md) | apply接受两个参数， |
-| 41 | [new操作符](./41-new操作符.md) | — |
+| 41 | [new 操作符](./41-new操作符.md) | — |
 | 42 | [typeof 和 instanceof 的区别](./42-typeof和instanceof的区别.md) | typeof 操作符返回一个字符串，表示未经计算的操作数的类型 |
 | 43 | [HTML5 Web Workers](./43-web-workers.md) | Web Workers 是一项强大的浏览器功能，它允许在 Web 应用程序的后台线程中运行 Ja… |
