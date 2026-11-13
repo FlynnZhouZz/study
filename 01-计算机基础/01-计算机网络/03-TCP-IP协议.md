@@ -8,7 +8,7 @@
 
 ## TCP/IP协议分层
 
-![fed6839d5e370c8ba92972bd3191c356](/assets/interview_guide/6717d449178970ed08c84e2975d484ff.png)
+![fed6839d5e370c8ba92972bd3191c356](assets/6717d449178970ed08c84e2975d484ff.png)
 
 TCP/IP协议族按照层次由上到下，层层包装。
 
@@ -86,7 +86,7 @@ IP 负责将包发送至接受者。
 
 ## TCP报文格式
 
-![5aaca04bcd5a362dc97602fab293511a](/assets/interview_guide/a15bde569d3b2d924896e7e96ed67891.png)
+![5aaca04bcd5a362dc97602fab293511a](assets/a15bde569d3b2d924896e7e96ed67891.png)
 
 16位源端口号：16位的源端口中包含初始化通信的端口。源端口和源IP地址的作用是标识报文的返回地址。
 
@@ -125,7 +125,7 @@ FIN：结束标志。
 
 所谓三次握手（Three-Way Handshake）即建立TCP连接，就是指建立一个TCP连接时，需要客户端和服务端总共发送3个包以确认连接的建立。在socket编程中，这一过程由客户端执行connect来触发，整个流程如下图所示：
 
-![389ec1bbbc65034d6b8d7ccd75521aae](/assets/interview_guide/0242dabfd24edfc4985cda466fd74edf.png)
+![389ec1bbbc65034d6b8d7ccd75521aae](assets/0242dabfd24edfc4985cda466fd74edf.png)
 
 （1）第一次握手：Client将标志位SYN置为1，随机产生一个值seq=J，并将该数据包发送给Server，Client进入SYN_SENT状态，等待Server确认。
 
@@ -145,7 +145,7 @@ SYN攻击：
 
 所谓四次挥手（Four-Way Wavehand）即终止TCP连接，就是指断开一个TCP连接时，需要客户端和服务端总共发送4个包以确认连接的断开。在socket编程中，这一过程由客户端或服务端任一方执行close来触发，整个流程如下图所示：
 
-![e07d0372d0789408c4ff85575307a86b](/assets/interview_guide/6aa7a641a7ad5754e298991cc378d6fc.png)
+![e07d0372d0789408c4ff85575307a86b](assets/6aa7a641a7ad5754e298991cc378d6fc.png)
 
 由于TCP连接时全双工的，因此，每个方向都必须要单独进行关闭，这一原则是当一方完成数据发送任务后，发送一个FIN来终止这一方向的连接，收到一个FIN只是意味着这一方向上没有数据流动了，即不会再收到数据了，但是在这个TCP连接上仍然能够发送数据，直到这一方向也发送了FIN。首先进行关闭的一方将执行主动关闭，而另一方则执行被动关闭，上图描述的即是如此。
 

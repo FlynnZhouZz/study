@@ -43,19 +43,19 @@ Web服务器解析请求，定位请求资源。服务器将资源复本写到TC
 6. 释放 TCP连接;
 7. 浏览器将该 html 文本并显示内容; 　
 
-![b599025c8dba3a4a625a2a23b3a6bc9a](/assets/interview_guide/baadadf5ff87a0be7778909c85e4e78e.png)
+![b599025c8dba3a4a625a2a23b3a6bc9a](assets/baadadf5ff87a0be7778909c85e4e78e.png)
 
 ### http协议是基于TCP/IP协议之上的应用层协议。
 
 **基于 请求-响应 的模式**
 HTTP协议规定,请求从客户端发出,最后服务器端响应该请求并 返回。换句话说,肯定是先从客户端开始建立通信的,服务器端在没有 接收到请求之前不会发送响应
 
-![1ff101ef20b9c1c3ec93ace135d4657e](/assets/interview_guide/42cb22c8b79e0143c7cbe2f346a7b0a1.png)
+![1ff101ef20b9c1c3ec93ace135d4657e](assets/42cb22c8b79e0143c7cbe2f346a7b0a1.png)
 
 **无状态保存**
 HTTP是一种不保存状态,即无状态(stateless)协议。HTTP协议 自身不对请求和响应之间的通信状态进行保存。也就是说在HTTP这个 级别,协议对于发送过的请求或响应都不做持久化处理。
 
-![2e4f169e32c645dfe79d5cf25f533451](/assets/interview_guide/4d4da24c50dac7f61a92ff1ba6d1094c.png)
+![2e4f169e32c645dfe79d5cf25f533451](assets/4d4da24c50dac7f61a92ff1ba6d1094c.png)
 
 使用HTTP协议,每当有新的请求发送时,就会有对应的新响应产 生。协议本身并不保留之前一切的请求或响应报文的信息。这是为了更快地处理大量事务,确保协议的可伸缩性,而特意把HTTP协议设计成 如此简单的。可是,随着Web的不断发展,因无状态而导致业务处理变得棘手 的情况增多了。比如,用户登录到一家购物网站,即使他跳转到该站的 其他页面后,也需要能继续保持登录状态。针对这个实例,网站为了能 够掌握是谁送出的请求,需要保存用户的状态。HTTP/1.1虽然是无状态协议,但为了实现期望的保持状态功能, 于是引入了Cookie技术。有了Cookie再用HTTP协议通信,就可以管 理状态了。有关Cookie的详细内容稍后讲解。
 
@@ -86,7 +86,7 @@ HTTP/1.1协议中共定义了八种方法（也叫“动作”）来以不同方
 
 虽然 RFC 2616 中已经推荐了描述状态的短语，例如"200 OK"，"404 Not Found"，但是WEB开发者仍然能够自行决定采用何种短语，用以显示本地化的状态描述或者自定义信息。
 
-![a603219bd31c9810fd5c697df4ef8906](/assets/interview_guide/4f48977d38b2a4213f63318eb26d4c23.png)
+![a603219bd31c9810fd5c697df4ef8906](assets/4f48977d38b2a4213f63318eb26d4c23.png)
 
 ## URL
 
@@ -119,25 +119,25 @@ HTTP/1.1协议中共定义了八种方法（也叫“动作”）来以不同方
 
 ## HTTP请求格式(请求协议)
 
-![048c4b194d2ddd7c1a12c6b322f3c741](/assets/interview_guide/53e4f187621ae6fba9046c40c0de854c.png)
+![048c4b194d2ddd7c1a12c6b322f3c741](assets/53e4f187621ae6fba9046c40c0de854c.png)
 
 
 URL包含：/index/index2?a=1&b=2；路径和参数都在这里。
 
-![a40676d74c2929ce9b5acd40aaaa3c5f](/assets/interview_guide/42384ed4ef8e1b450db512d381d9daca.png)
+![a40676d74c2929ce9b5acd40aaaa3c5f](assets/42384ed4ef8e1b450db512d381d9daca.png)
 
 请求头里面的内容举个例子：这个length表示请求体里面的数据长度，其他的请求头里面的这些键值对，陆续我们会讲的，大概知道一下就可以了，其中有一个user-agent，算是需要你记住的吧，就是告诉你的服务端，我是用什么给你发送的请求。
 
-![f93e6d089baf1e1f8b3e39fec63e691a](/assets/interview_guide/c104d6010c75f0eadc92356b78d1dbed.png)
+![f93e6d089baf1e1f8b3e39fec63e691a](assets/c104d6010c75f0eadc92356b78d1dbed.png)
 
 以京东为例，看一下user-agent
 
-![553971a8167cdf75f421a07d763e3c0d](/assets/interview_guide/673e3596727fd3aeebfa1e0c654279d2.png)
-![dc17e61ff12283be32a2d98b7fe56691](/assets/interview_guide/7753c94f70cc6c423cc3f3305738dd40.png)
+![553971a8167cdf75f421a07d763e3c0d](assets/673e3596727fd3aeebfa1e0c654279d2.png)
+![dc17e61ff12283be32a2d98b7fe56691](assets/7753c94f70cc6c423cc3f3305738dd40.png)
 
 看一个爬虫的例子，爬京东的时候没问题，但是爬抽屉的时候必须带着user-agent，因为抽屉对user-agent做了判断，来判断你是不是一个正常的请求，算是反扒机制的一种。
 
-![fa53d5282acb419b33bd3910c0b743c0](/assets/interview_guide/0f3d3338ce481d8026308abc261b18e3.png)
+![fa53d5282acb419b33bd3910c0b743c0](assets/0f3d3338ce481d8026308abc261b18e3.png)
 
 打开我们保存的demo.html文件，然后通过浏览器打开看看就能看到页面效果。
 
@@ -146,6 +146,6 @@ URL包含：/index/index2?a=1&b=2；路径和参数都在这里。
 
 ## HTTP响应格式（响应协议）
 
-![bf258a36af0efb268a9e8086f4fa06a3](/assets/interview_guide/302cec2465629c1693cbfeb67ffdfa09.png)
-![fed669c04888d28ebab9996c534f182e](/assets/interview_guide/5a5070fb307bfdb8828a5a278f4bac9a.png)
+![bf258a36af0efb268a9e8086f4fa06a3](assets/302cec2465629c1693cbfeb67ffdfa09.png)
+![fed669c04888d28ebab9996c534f182e](assets/5a5070fb307bfdb8828a5a278f4bac9a.png)
 
