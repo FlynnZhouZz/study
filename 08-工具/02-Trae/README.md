@@ -6,4 +6,4 @@
 
 | # | 文档 | 要点 |
 |---|------|------|
-| 01 | [Figma MCP 配置指南](./01-Figma-MCP配置指南.md) | Figma 官方 API 域名（api.figma.com、www.figma.com）在国内网… |
+| 01 | [Figma MCP 配置指南](./01-Figma-MCP配置指南.md) | 适用范围：TRAE / TRAE SOLO CN 中安装的 Figma AI Bridge MC… |

@@ -1,8 +1,6 @@
-# react项目调起WhatsApp
+# React 项目调起 WhatsApp
 
-说明：
-> 需兼容在webview中也能调起WhatsApp并制定客服人员和预发信息
-
+> 从网页跳转 WhatsApp 客服会话：`wa.me` 与 `whatsapp://` 两种 Scheme 的取舍，以及在 iOS WKWebView 里会被拦截的几个坑。
 
 ## 注意事项
 

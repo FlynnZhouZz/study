@@ -1,6 +1,11 @@
-# CRMChat部署
+# CRMChat 部署
+
+> CRMChat（PHP 客服系统）跑在本机 `20108` 端口，前面挂 Nginx 做反向代理，并把 `/api_node/` 转发到 Node 服务。
+>
+> 这段配置解决三件事：① Node 接口与 PHP 应用同域，避免跨域；② WebSocket 升级头透传（客服需要长连接）；③ 静态资源短缓存、动态请求不缓存。
 
 ## 反向代理配置
+
 ```nginx
 location ^~ /api_node/ {
     proxy_pass https://mail.go168.site/;

@@ -1,4 +1,6 @@
-# node+express实现gmail发送邮件
+# Express 实现 Gmail 发信（邮箱验证码）
+
+> 用 nodemailer 走 Gmail SMTP 发验证码邮件：重发限流、Firestore 事务去重、验证码校验，以及 SMTP 连不通时的排查顺序。
 
 ## 准备工作
 
@@ -8,9 +10,32 @@
 
 路径: 登录 - 设置（右上角设置icon） - 查看所有设置 - 转发和POP/IMAP - 启动POP和IMAP
 
-### 申请Google App Password
+### 申请 Google App Password
 
-[申请Google App Password](./08-申请Gmail-App-Password.md)
+App Password 只在开启两步验证后可用；Google Workspace（公司/学校）账号还需管理员允许生成。
+
+1. 登录 [Google 管理账号](https://myaccount.google.com)，进入 安全性与登录 → 两步验证 → 开启
+2. 打开 [创建和管理应用专用密码](https://myaccount.google.com/apppasswords) → 验证密码 → 创建 → 复制
+   （只展示这一次，需当场保存）
+3. 回到同一页面可撤销或轮换，换机器部署时建议重新生成
+
+> 官方文档：<https://support.google.com/accounts/answer/185833>
+
+**限制与注意**
+
+- 生产环境同样要妥善保管：放环境变量或密钥管理，不要提交进仓库
+- Gmail SMTP 有发送速率限制。月发送量大（例如 10k/月）时换成 SES / Mailgun / SendGrid，送达率与稳定性更好
+- App Password 等同于账号凭证的一部分，泄露后必须立刻撤销
+
+`.env` 配置（587 端口走 STARTTLS，所以 `SMTP_SECURE=false`；465 隐式 TLS 才填 `true`）：
+
+```env
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_USER=example@gmail.com
+SMTP_PASS=yourAppPassword
+```
 
 ## 开发
 

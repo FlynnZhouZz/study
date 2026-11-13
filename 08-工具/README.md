@@ -9,6 +9,7 @@
 | 01 | n8n | 可视化工作流自动化：入门、节点、宝塔部署 | 5 | [README](./01-n8n/README.md) |
 | 02 | Trae | AI 编辑器与 Figma MCP 配置 | 1 | [README](./02-Trae/README.md) |
 | 03 | UI_UX_pro_max | 设计规范生成工具的使用 | 1 | [README](./03-UI_UX_pro_max/README.md) |
+| 04 | 开发环境 | 虚拟机、终端策略与编码 | 2 | [README](./04-开发环境/README.md) |
 
 ## 什么时候用得上
 
@@ -17,6 +18,8 @@
 | 把重复的手工流程串成自动任务（抓取、通知、同步） | n8n | [初始 n8n](./01-n8n/01-初始n8n.md) |
 | 让 AI 读取设计稿并生成代码 | Trae + Figma MCP | [Figma-MCP 配置指南](./02-Trae/01-Figma-MCP配置指南.md) |
 | 快速产出符合规范的 UI 样式 | UI UX Pro Max | [使用说明](./03-UI_UX_pro_max/01-UI_UX_pro_max的使用.md) |
+| npm 报「禁止运行脚本」、终端中文乱码 | PowerShell 配置 | [执行策略与编码](./04-开发环境/02-PowerShell执行策略与编码.md) |
+| 需要在 Mac 上跑 Windows 专用工具 | VMWare Fusion | [虚拟机安装](./04-开发环境/01-VMWare虚拟机安装.md) |
 
 ## n8n 推荐路径
 

@@ -32,6 +32,8 @@ SCAN_DIRS = {
     "04-工程化/01-git": ("Git", "分支、标签、常见报错与仓库清理。"),
     "04-工程化/05-docker": ("Docker", "常用命令、compose 与 nginx 证书配置。"),
     "04-工程化/04-部署": ("部署", "Nginx 单页应用配置与跨域代理。"),
+    "04-工程化/06-性能优化": ("性能优化", "从体系到单项实战：先建立指标，再动手优化。"),
+    "04-工程化/03-测试": ("测试", "单测、组件测试、端到端的分工与选型。"),
     "04-工程化/07-微前端/01-qiankun": ("微前端 · qiankun", "微前端架构原理与子应用接入实战。"),
     "05-后端与数据/01-nodejs": ("Node.js", "运行时环境与版本兼容问题。"),
     "05-后端与数据/02-php": ("PHP", "ThinkPHP 业务实践、邮件轮询与服务器排查。"),
@@ -46,14 +48,12 @@ SCAN_DIRS = {
     "08-工具/01-n8n": ("n8n", "可视化工作流自动化平台。"),
     "08-工具/02-Trae": ("Trae", "AI 编辑器与 MCP 配置。"),
     "08-工具/03-UI_UX_pro_max": ("UI UX Pro Max", "设计规范生成工具的使用。"),
+    "08-工具/04-开发环境": ("开发环境", "本机环境搭建与终端配置问题，Windows 侧居多。"),
+    "06-实战项目/02-项目记录": ("项目记录", "真实项目的设计与实施记录。读的时候看「为什么这么做」，而不是抄代码。"),
 }
 
 # 手写 README 的目录，生成器不覆盖
-SKIP = {"06-实战项目", "99-手册", "01-计算机基础", "02-前端核心", "03-框架与跨端",
-        "04-工程化", "05-后端与数据", "07-面试专项", "08-工具", "00-路线"}
-
-# 手写 README 的目录，生成器不覆盖
-SKIP = {"06-实战项目", "99-手册", "01-计算机基础", "02-前端核心", "03-框架与跨端",
+SKIP = {"06-实战项目", "98-杂项", "99-手册", "01-计算机基础", "02-前端核心", "03-框架与跨端",
         "04-工程化", "05-后端与数据", "07-面试专项", "08-工具", "00-路线"}
 
 
@@ -84,9 +84,19 @@ def read_meta(path):
         title = os.path.splitext(os.path.basename(path))[0]
         title = re.sub(r"^\d+[-_]", "", title)  # 去掉文件名里的顺序前缀
     desc = ""
+    # 约定：H1 之后的第一段引用块即「一句话说明」，优先级高于正文首句
+    head = [l for l in prose if not l.startswith("#")]
+    for l in head[:6]:
+        if l.startswith(">"):
+            quote = re.sub(r"[`*\[\]<>]", "", l.lstrip(">").strip()).strip()
+            if len(quote) >= 8:
+                desc = quote[:48] + ("…" if len(quote) > 48 else "")
+                break
     code_hint = re.compile(r"^(if|for|while|const|let|var|function|return|class|import|export|new|def|async)\b|[;{}]|//|console\.|=>")
-    for l in prose:
+    for l in ([] if desc else prose):
         if not l or l.startswith(("#", "![", "|", "```", ">", "-", "*", "<", "//", "/*")):
+            continue
+        if re.match(r"^\d+[.、)]\s", l):  # 有序列表项，不是摘要
             continue
         plain = re.sub(r"[`*\[\]!<>]", "", l).strip()
         if len(plain) < 8 or code_hint.search(plain) or plain.count("(") > 1:

@@ -8,4 +8,4 @@
 |---|------|------|
 | 01 | [如何解决已被git跟踪文件不在跟踪](./01-取消git文件跟踪.md) | 在项目中，一开始有某个文件（如: .DS_Store）被git跟踪提交过，但后续我想使git不在… |
 | 02 | [git标签](./02-git标签.md) | — |
-| 03 | [Git报错： Failed to connect to github.com port 443 解决方案](./03-Git连接github报443错误.md) | 1. 自己有vpn，网页可以打开github。说明命令行在拉取/推送代码时并没有使用vpn进行代… |
+| 03 | [Git报错： Failed to connect to github.com port 443 解决方案](./03-Git连接github报443错误.md) | 配置http代理Windows、Linux、Mac OS中git命令 |
