@@ -133,6 +133,7 @@ benji wiki sync            # 等价于先 pull 再 push
 
 | 约定 | 说明 |
 | --- | --- |
+| 仓库介绍页 | 仓库根目录的 `README.md` 作为整个 Wiki 的介绍页，展示在个人主页 Wiki 首页顶部，不进入书籍列表；frontmatter 规则与书籍 README 一致 |
 | 书籍落地页 | 书籍目录下的 `README.md` 作为该书首页；没有时展示页面卡片列表 |
 | 深层 README | 书籍目录以下更深层的 `README.md` 按普通页面上传 |
 | 页面顺序 | frontmatter 的 `order` 优先，未填写时按文件名自然排序 |
