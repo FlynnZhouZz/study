@@ -43,6 +43,30 @@
           "name": "04-数据结构与算法",
           "visibility": "public",
           "summary": "数据结构与算法（待补）"
+        },
+        {
+          "path": "",
+          "name": "01-计算机基础",
+          "visibility": "public",
+          "summary": "01-计算机基础"
+        },
+        {
+          "path": "04-数据结构与算法/01-基础数据结构",
+          "name": "01-基础数据结构",
+          "visibility": "public",
+          "summary": "基础数据结构"
+        },
+        {
+          "path": "04-数据结构与算法/02-高级算法",
+          "name": "02-高级算法",
+          "visibility": "public",
+          "summary": "高级算法"
+        },
+        {
+          "path": "04-数据结构与算法/03-leetcode刷题",
+          "name": "03-leetcode刷题",
+          "visibility": "public",
+          "summary": "LeetCode 刷题（待补）"
         }
       ]
     },
@@ -80,6 +104,12 @@
           "name": "05-typescript",
           "visibility": "public",
           "summary": "TypeScript"
+        },
+        {
+          "path": "",
+          "name": "02-前端核心",
+          "visibility": "public",
+          "summary": "02-前端核心"
         }
       ]
     },
@@ -111,6 +141,12 @@
           "name": "04-android",
           "visibility": "public",
           "summary": "Android 原生"
+        },
+        {
+          "path": "",
+          "name": "03-框架与跨端",
+          "visibility": "public",
+          "summary": "03-框架与跨端"
         }
       ]
     },
@@ -160,6 +196,30 @@
           "name": "07-微前端",
           "visibility": "public",
           "summary": "微前端"
+        },
+        {
+          "path": "",
+          "name": "04-工程化",
+          "visibility": "public",
+          "summary": "04-工程化"
+        },
+        {
+          "path": "02-构建工具/02-webpack",
+          "name": "02-webpack",
+          "visibility": "public",
+          "summary": "webpack"
+        },
+        {
+          "path": "02-构建工具/03-vite",
+          "name": "03-vite",
+          "visibility": "public",
+          "summary": "vite"
+        },
+        {
+          "path": "07-微前端/01-qiankun",
+          "name": "01-qiankun",
+          "visibility": "public",
+          "summary": "微前端 · qiankun"
         }
       ]
     },
@@ -197,6 +257,18 @@
           "name": "05-运维",
           "visibility": "public",
           "summary": "运维"
+        },
+        {
+          "path": "",
+          "name": "05-后端与数据",
+          "visibility": "public",
+          "summary": "05-后端与数据"
+        },
+        {
+          "path": "05-运维/01-宝塔",
+          "name": "01-宝塔",
+          "visibility": "public",
+          "summary": "宝塔面板"
         }
       ]
     },
@@ -210,6 +282,12 @@
           "name": "02-项目记录",
           "visibility": "public",
           "summary": "项目记录"
+        },
+        {
+          "path": "",
+          "name": "06-实战项目",
+          "visibility": "public",
+          "summary": "06-实战项目"
         }
       ]
     },
@@ -241,6 +319,30 @@
           "name": "04-真实面试经历",
           "visibility": "public",
           "summary": "真实面试经历"
+        },
+        {
+          "path": "",
+          "name": "07-面试专项",
+          "visibility": "public",
+          "summary": "07-面试专项"
+        },
+        {
+          "path": "01-面试/12-react专项",
+          "name": "12-react专项",
+          "visibility": "public",
+          "summary": "React 专项"
+        },
+        {
+          "path": "01-面试/13-reactnative专项",
+          "name": "13-reactnative专项",
+          "visibility": "public",
+          "summary": "React Native 专项"
+        },
+        {
+          "path": "01-面试/14-过往面试总结",
+          "name": "14-过往面试总结",
+          "visibility": "public",
+          "summary": "过往面试总结"
         }
       ]
     },
@@ -272,6 +374,12 @@
           "name": "04-开发环境",
           "visibility": "public",
           "summary": "开发环境"
+        },
+        {
+          "path": "",
+          "name": "08-工具",
+          "visibility": "public",
+          "summary": "08-工具"
         }
       ]
     },
