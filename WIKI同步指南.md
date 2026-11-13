@@ -28,6 +28,8 @@ git status
 
 ```bash
 benji wiki init
+# 如需初始化时直接全部公开：
+benji wiki init --visibility public
 ```
 
 执行后会在仓库根目录生成 `wiki.config.json`，并向 `.gitignore` 追加 `.wiki-token`、`.wiki-sync/`。
@@ -35,6 +37,7 @@ benji wiki init
 说明：
 
 - 只扫描含 Markdown 的目录，每个一级目录为一个同步根目录，二级目录默认作为一本书。
+- `--visibility` 支持 `private`、`login`、`public`，显式传入时统一覆盖已有 roots/books 的可见性；不传则保留原值（默认 `private`）。
 - 重复执行不会覆盖已有配置，只增量补充新发现的目录。
 - `server` 默认写入 `https://server.benj.cn`，无需手动指定。
 - `repoKey`（如 `study-8b4a6ebe`）由 init 生成并固定，用于标识该仓库，不要修改。
